@@ -1,0 +1,15 @@
+{{ define "pages" }}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latest pages</title>
+</head>
+<body>
+    <h1>Latest pages</h1>
+    {{ range . }}
+        <h2><a href="/page/{{ .ID }}"> {{ .Title }}</a></h2>
+        <p> {{ .Content }}</p>
+    {{ end }}
+</body>
+</html>
+{{ end }}
